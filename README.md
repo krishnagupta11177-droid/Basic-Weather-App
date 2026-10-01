@@ -1,16 +1,88 @@
-# React + Vite
+# 🌦️ Basic Weather App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A simple weather app built with React. Search any city to see its current weather along with a matching background photo.
 
-Currently, two official plugins are available:
+**Live demo:** _add your Vercel/Netlify link here_
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+![Weather App Screenshot](./screenshot.png)
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Search weather by city name
+- Shows temperature, feels-like, humidity, min and max temperature, and a weather description
+- Displays a weather-related image fetched from Unsplash
+- Error message for cities that can't be found
 
-## Expanding the Oxlint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- [React](https://react.dev/) with [Vite](https://vite.dev/)
+- [Material UI](https://mui.com/)
+- [OpenWeatherMap API](https://openweathermap.org/api) for weather data
+- [Unsplash API](https://unsplash.com/developers) for images
+
+## Getting Started
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/krishnagupta11177-droid/Basic-Weather-App.git
+cd Basic-Weather-App
+```
+
+### 2. Install dependencies
+
+```bash
+npm install
+```
+
+### 3. Add your API keys
+
+Create a `.env` file in the project root:
+
+```
+VITE_WEATHER_KEY=your_openweathermap_key
+VITE_UNSPLASH_KEY=your_unsplash_access_key
+```
+
+You can get free keys from:
+
+- OpenWeatherMap: https://openweathermap.org/api
+- Unsplash: https://unsplash.com/developers
+
+### 4. Run the app
+
+```bash
+npm run dev
+```
+
+Then open the local URL shown in the terminal (usually `http://localhost:5173`).
+
+## Project Structure
+
+```
+src/
+├── App.jsx          # Root component
+├── WeatherApp.jsx   # Combines search box and info card
+├── SearchBox.jsx    # City input and weather API call
+├── InfoBox.jsx      # Weather card with Unsplash image
+└── main.jsx         # Entry point
+```
+
+## What I Learned
+
+- Fetching data from APIs with `fetch` and `async/await`
+- Managing state and side effects with `useState` and `useEffect`
+- Passing data between components using props
+- Keeping API keys out of the code with environment variables
+
+## Future Improvements
+
+- 5-day forecast
+- Use current location
+- Dark mode
+
+## Author
+
+**Krishna** — B.Tech CSE student
+
+GitHub: [@krishnagupta11177-droid](https://github.com/krishnagupta11177-droid)
