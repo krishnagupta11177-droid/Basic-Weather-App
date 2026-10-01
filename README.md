@@ -2,9 +2,10 @@
 
 A simple weather app built with React. Search any city to see its current weather along with a matching background photo.
 
-**Live demo:** _add your Vercel/Netlify link here_
+**Live demo:** https://basic-weather-app-psi-eight.vercel.app/
 
-![Weather App Screenshot](./screenshot.png)
+<img width="1481" height="766" alt="Screenshot 2026-10-01 225915" src="https://github.com/user-attachments/assets/50e0b0a4-df19-4cfb-a7b4-23c273729be4" />
+
 
 ## Features
 
