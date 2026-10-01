@@ -12,7 +12,7 @@ export default function SeachBox({ updateInfo }) {
   let getWeatherInfo = async () => {
     try {
       let response = await fetch(
-        `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`,
+        `${API_URL}?q=${encodeURIComponent(city.trim())}&appid=${API_KEY}&units=metric`,
       );
       console.log(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
       let jsonResponse = await response.json();
