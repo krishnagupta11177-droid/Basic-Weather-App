@@ -14,6 +14,7 @@ export default function SeachBox({ updateInfo }) {
       let response = await fetch(
         `${API_URL}?q=${city}&appid=${API_KEY}&units=metric`,
       );
+      console.log(`${API_URL}?q=${city}&appid=${API_KEY}&units=metric`);
       let jsonResponse = await response.json();
       // console.log(jsonResponse);
 
@@ -38,6 +39,7 @@ export default function SeachBox({ updateInfo }) {
       event.preventDefault();
       console.log(city);
       setCity("");
+      setError(false);
       let newInfo = await getWeatherInfo();
       updateInfo(newInfo);
     } catch (err) {

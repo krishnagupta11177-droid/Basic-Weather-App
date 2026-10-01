@@ -21,7 +21,7 @@ export default function InfoBox({ info }) {
           )}&per_page=30&client_id=${import.meta.env.VITE_UNSPLASH_KEY}`,
         );
         const data = await response.json();
-        const photo = data.results[6] || data.results[0];
+        const photo = data.results[0] || data.results[0];
         if (photo) setImgUrl(photo.urls.regular);
       } catch (err) {
         console.log("Error fetching photo", err);
